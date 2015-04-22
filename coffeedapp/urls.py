@@ -5,6 +5,9 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'coffeedapp.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
+    url(r'', include('core.urls')),  
+##this includes core.urls but it doesn't work if its under the lines below it.  It has to be first for some reason.
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', include(admin.site.urls)),
+    
 ]
